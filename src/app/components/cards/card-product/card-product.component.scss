@@ -1,0 +1,44 @@
+.card {
+    padding: 0px !important;
+}
+
+.card-header{
+    height: 170px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    color: #2C3E50;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+.price {
+    align-self: center;
+}
+
+.card-footer{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0px 20px 20px 20px;
+    color: #1ABC9C;
+}
+
+.line {
+    border: 2px solid #1ABC9C;
+}
+
+.container-footer{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

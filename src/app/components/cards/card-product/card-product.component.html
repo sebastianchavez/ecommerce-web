@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-header" [ngStyle]="{'background-image': 'url('+ product.image + ')'}"></div>
+    <div class="card-body">
+        <label>{{product.name}}</label>
+        <br>
+        <label class="price">${{product.price}}</label>
+    </div>
+    <div class="card-footer">
+        <div class="line"></div>
+        <div class="container-footer">
+            <label>Agregar al carro</label>
+            <img src="assets/icons/cart_green.svg" alt="">
+        </div>
+    </div>
+</div>

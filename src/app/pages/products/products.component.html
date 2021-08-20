@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="grid grid-info">
+        <div class="input-search">
+            <app-input-text placeholder="Buscar..."></app-input-text>
+        </div>
+        <div class="input-select">
+            <app-input-select [options]="options"></app-input-select>
+        </div>
+        <div class="info">
+            <label>1 - 6 de 30 productos</label>
+        </div>
+    </div>
+
+    <div class="grid grid-products">
+        <div>
+            <app-card-category></app-card-category>
+        </div>
+        <div></div>
+        <div class="grid-cards-producs">
+            <div *ngFor="let p of products">
+                <app-card-product></app-card-product>
+            </div>
+        </div>
+    </div>
+
+    <app-pagination></app-pagination>
+
+</div>
