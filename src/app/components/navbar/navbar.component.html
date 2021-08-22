@@ -1,15 +1,9 @@
 <header>
     <nav>
-        <div>
-            <label>Repostería</label>
+        <div class="menu-link">
+            <span *ngFor="let m of menu" [routerLink]="m.router">{{m.name}}</span>
         </div>
-        <div>
-            <label>Panadería</label>
-        </div>
-        <div>
-            <label>Lacteos</label>
-        </div>
-        <div class="container-icon">
+        <div class="container-icon menu-link">
             <img src="assets/icons/cart.svg" class="icon" alt="">
             <div class="badge">
                 2

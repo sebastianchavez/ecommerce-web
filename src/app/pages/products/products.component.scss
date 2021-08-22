@@ -1,5 +1,9 @@
-.container {
-    padding: 50px 100px 0px 100px;
+:host {
+    // background-image: url('../../../assets/imgs/background_1.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover !important;
+    // background-position: center center;
+    // display: block;
 }
 
 .grid-info {
@@ -65,9 +69,6 @@
 
 // Responsive
 @media (max-width: 767px) {
-    .container{
-        padding: 30px 20px 0px 20px;
-    }
 
     .grid-info{
         grid-template-columns: 1fr;

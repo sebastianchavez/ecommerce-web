@@ -22,6 +22,18 @@ nav div {
     margin: 1rem;
 }
 
+.menu-link {
+    cursor: pointer;
+}
+
+.menu-link span {
+    margin: 0px 10px;
+}
+
+.menu-link span:hover{
+    color: #1ABC9C;
+}
+
 nav button {
     display: none;
     background-color: transparent !important;

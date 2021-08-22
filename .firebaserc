@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ecommerce-47056": {
+      "hosting": {
+        "ecommerce-web": [
+          "ecommerce-47056"
+        ]
+      }
+    }
+  }
+}

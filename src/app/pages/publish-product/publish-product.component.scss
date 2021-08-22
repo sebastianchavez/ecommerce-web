@@ -1,0 +1,63 @@
+:host{
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+
+.publish-form {
+    min-width: 400px;
+    max-width: 500px;
+    padding: 40px;
+}
+
+.image{
+    // background-image: url('../../../assets/imgs/sinimagen.png');
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: center center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image-load{
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 5px;
+}
+
+.grid {
+    display: grid;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    height: 65px;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+label {
+    color: #95A5A6;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media(max-width: 767px) {
+    .publish-form {
+        min-width: 100%;
+    }
+
+    .form-group {
+        margin: 0px;
+    }
+
+    :host{
+        display: block;
+    }
+}

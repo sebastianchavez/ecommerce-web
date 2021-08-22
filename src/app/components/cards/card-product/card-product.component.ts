@@ -11,7 +11,10 @@ export class CardProductComponent implements OnInit {
   @Input() product: Product = {
     image: 'assets/imgs/integral.jpg',
     name: 'Pan molde - integral',
-    price: 2500
+    price: 2500,
+    category: '',
+    quant: 0,
+    createdAt: new Date()
   };
   constructor() { }
 

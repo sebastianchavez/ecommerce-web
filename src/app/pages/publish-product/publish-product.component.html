@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card publish-form">
+        <div *ngIf="!load && data.image == ''" class="image" [ngStyle]="{ 'background-image': 'url(' +  noImage + ')' }" (click)="fileInput.click()"></div>
+        <div *ngIf="load" class="image-load" [ngStyle]="{ 'background-image': 'url(' + loadImage + ')' }" (click)="fileInput.click()"></div>
+        <div *ngIf="!load && data.image != ''" class="image" [ngStyle]="{ 'background-image': 'url(' + data.image + ')' }" (click)="fileInput.click()"></div>
+        <input type="file" (change)="onSelectImage($event)" style="display: none"
+          class="text-center center-block file-upload" #fileInput />
+        <br>
+        <div>
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input [(ngModel)]="data.name" type="text" class="input" name="" id="">
+            </div>
+            <div class="form-group">
+                <label>Precio:</label>
+                <input [(ngModel)]="data.price" type="number" class="input" name="" id="">
+            </div>
+            <div class="form-group">
+                <label>Cantidad:</label>
+                <input [(ngModel)]="data.quant" type="number" class="input" name="" id="">
+            </div>
+            <div class="form-group">
+                <label>Categoría:</label>
+                <input [(ngModel)]="data.category" type="text" class="input" name="" id="">
+            </div>
+            <button class="btn btn-block btn-primary mt-1" (click)="saveProduct()" [disabled]="btnLoad">
+                Publicar
+                <img *ngIf="btnLoad" src="assets/icons/spinner.svg" style="width: 20px; height: 20px; margin-left: 10px;" alt="">
+            </button>
+        </div>
+    </div>
+</div>

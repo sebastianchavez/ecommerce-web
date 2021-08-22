@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Option } from '../../models/option.interface';
 import { Product } from '../../models/product.interface';
+import { ProductService } from '../../services/product/product.service';
 
 @Component({
   selector: 'app-products',
@@ -20,46 +21,28 @@ export class ProductsComponent implements OnInit {
     },
   ]
 
-  products: Product[] = [
-    {
-      image: '',
-      name: '',
-      price: 0
-    },
-    {
-      image: '',
-      name: '',
-      price: 0
-    },
-    {
-      image: '',
-      name: '',
-      price: 0
-    },
-    {
-      image: '',
-      name: '',
-      price: 0
-    },
-    {
-      image: '',
-      name: '',
-      price: 0
-    },
-    {
-      image: '',
-      name: '',
-      price: 0
-    },
-    {
-      image: '',
-      name: '',
-      price: 0
-    }
-  ]
-  constructor() { }
+  products: Product[] = []
+  constructor(
+    private productService: ProductService
+  ) { }
 
   ngOnInit(): void {
+    this.getProduct()
   }
 
+  async getProduct(){
+    try {
+      console.log('getProducts')
+      this.productService.getProducts()
+        .subscribe(res => {
+          console.log({res})
+          this.products = res
+        },err => {
+          console.log({err})
+        })
+      // console.log('RESPONSE:', response)
+    } catch (e) {
+      console.log('ERROR:', e)
+    }
+  }
 }

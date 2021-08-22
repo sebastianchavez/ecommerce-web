@@ -1,6 +1,6 @@
 <div class="container-input">
     <input type="text" [placeholder]="placeholder" name="" id="">
-    <button  class="container-icon">
+    <button class="container-icon" *ngIf="icon && icon == 'search'">
         <img src="assets/icons/search.svg" alt="">
     </button>
 </div>
