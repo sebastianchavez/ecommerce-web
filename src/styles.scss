@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-// https://flatuicolors.com/palette/defo
+//      
 
 body {
     margin: 0px !important;
@@ -45,6 +45,11 @@ body {
     align-items: center;
 }
 
+.btn:disabled {
+    cursor: default;
+    opacity: .6;
+}
+
 .btn-block {
     width: 100%;
 }
@@ -59,22 +64,32 @@ body {
     background-color: #2c3e50;
 }
 
+.btn-danger {
+    color: white;
+    background-color: #e74c3c;
+}
+
+.btn-danger:active {
+    color: white;
+    background-color: #c0392b;
+}
+
 .mt-1 {
-    margin-top: 1em;
+    margin-top: 1em !important;
 }
 
 .mt-2 {
-    margin-top: 2em;
+    margin-top: 2em !important;
 }
 
-.input{
-    border: 1px solid #BDC3C7;
-    padding: 0px 10px 0px 10px;
-    height: 40px;
-    width: 100%;
-    border-radius: 5px;
-    box-sizing: border-box;
-    outline-color: rgb(52, 152, 219, .5);
+.ml-1 {
+    margin-left: 1em !important;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 767px){
@@ -82,3 +97,5 @@ body {
         padding: 30px 20px 20px 20px;
     }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

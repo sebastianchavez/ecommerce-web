@@ -1,0 +1,22 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+
+  .grid div {
+    align-self: center;
+  }
+
+  table {
+    width: 100%;
+  }

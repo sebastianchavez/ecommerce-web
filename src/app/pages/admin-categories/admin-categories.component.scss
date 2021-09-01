@@ -1,0 +1,23 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 30% 20%;
+    gap: 2em;
+    align-self: end;
+  }
+
+  .grid div {
+    align-self: center;
+  }
+
+  table {
+    width: 100%;
+  }

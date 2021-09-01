@@ -1,15 +1,20 @@
 <header>
     <nav>
-        <div class="menu-link">
-            <span *ngFor="let m of menu" [routerLink]="m.router">{{m.name}}</span>
+        <div class="menu-link">           
+                <button *ngFor="let m of menu" (click)="navigateToPage(m.router)" mat-button >{{m.name}}</button>
+            <!-- <mat-menu #menu="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+              </mat-menu> -->
+            <!-- <span *ngFor="let m of menu" [routerLink]="m.router">{{m.name}}</span> -->
         </div>
-        <div class="container-icon menu-link">
+        <div class="container-icon menu-link" (click)="navigateToPage('/cart')">
             <img src="assets/icons/cart.svg" class="icon" alt="">
-            <div class="badge">
-                2
+            <div class="badge" *ngIf="counter > 0">
+                {{counter}}
             </div>
         </div>
-        <button>
+        <button class="togger">
             <img src="assets/icons/menu.svg" class="icon" alt="">
         </button>
     </nav>

@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="grid grid-cart">
+        <table mat-table [dataSource]="products" class="mat-elevation-z8">
+        
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+            <!-- Name Nombre -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Nombre </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Weight Categoría -->
+            <ng-container matColumnDef="category">
+              <th mat-header-cell *matHeaderCellDef> Categoría </th>
+              <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+            </ng-container>
+          
+            <!-- Symbol Cantidad -->
+            <ng-container matColumnDef="quant">
+              <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+              <td mat-cell *matCellDef="let element"> {{element.quant}} </td>
+            </ng-container>
+    
+            <!-- Symbol Precio -->
+            <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef> Precio </th>
+                <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    
+          <mat-card>
+            <mat-list>
+                <mat-list-item>Total: {{total}}</mat-list-item>
+                <mat-divider></mat-divider>
+                <button mat-raised-button class="btn-primary mt-1" (click)="pay()">Pagar</button>
+                <button mat-raised-button class="btn-danger ml-1 mt-1" (click)="cancel()">Cancelar</button>
+              </mat-list>
+          </mat-card>
+    </div>
+</div>

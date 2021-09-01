@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../../../models/product.interface';
 
 @Component({
@@ -13,12 +13,22 @@ export class CardProductComponent implements OnInit {
     name: 'Pan molde - integral',
     price: 2500,
     category: '',
-    quant: 0,
-    createdAt: new Date()
+    id: '',
+    isDeleted: false,
+    stock: 0,
+    stockPending: 0,
+    stockVending: 0,
+    createdAt: new Date(),
+    nameImage: ''
   };
+  @Output() clickAddCart: EventEmitter<any> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  addCart(){
+    this.clickAddCart.emit(this.product)
+  }
 }

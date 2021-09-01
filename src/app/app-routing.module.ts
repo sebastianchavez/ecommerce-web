@@ -9,6 +9,26 @@ const routes: Routes = [
   {
     path: 'publish',
     loadChildren: () => import('./pages/publish-product/publish-product.module').then(m => m.PublishProductModule)
+  },
+  {
+    path: 'admin-products',
+    loadChildren: () => import('./pages/admin-products/admin-products.module').then(m => m.AdminProductsModule)
+  },
+  {
+    path: 'cart',
+    loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule)
+  },
+  {
+    path: 'checkout/:id',
+    loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule)
+  },
+  {
+    path: 'admin-products',
+    loadChildren: () => import('./pages/admin-products/admin-products.module').then(m => m.AdminProductsModule)
+  },
+  {
+    path: 'admin-categories',
+    loadChildren: () => import('./pages/admin-categories/admin-categories.module').then(m => m.AdminCategoriesModule)
   }
 ];
 

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-category.component.scss']
 })
 export class CardCategoryComponent implements OnInit {
+  panelOpenState = false;
 
   constructor() { }
 

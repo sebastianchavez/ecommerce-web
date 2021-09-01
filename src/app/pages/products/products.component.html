@@ -1,28 +1,47 @@
-<div class="container">
+
+  <div class="cartegories">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle *ngFor="let c of categories">{{c.name}}</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  
+  <div class="container">
     <div class="grid grid-info">
         <div class="input-search">
-            <app-input-text placeholder="Buscar..." icon="search"></app-input-text>
+            <form class="example-form">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Buscar</mat-label>
+                  <input type="text" matInput>
+                  <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+              </form>
         </div>
-        <div class="input-select">
-            <app-input-select [options]="options"></app-input-select>
-        </div>
+        <!-- <div class="input-select">
+            <mat-form-field appearance="fill">
+                <mat-label>Orden</mat-label>
+                <mat-select [(ngModel)]="filters.order" name="order" (selectionChange)="getProduct()">
+                  <mat-option *ngFor="let o of options" [value]="o.value">
+                    {{o.text}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div> -->
         <div class="info">
-            <label>1 - 6 de 30 productos</label>
+            <label>1 - {{products.length}} de {{pagination.totalProducts}} productos</label>
         </div>
     </div>
-
+    
     <div class="grid grid-products">
-        <div>
-            <app-card-category></app-card-category>
-        </div>
-        <div></div>
         <div class="grid-cards-producs">
             <div *ngFor="let p of products">
-                <app-card-product [product]=p></app-card-product>
+                <app-card-product [product]="p" (clickAddCart)="openDialog($event)"></app-card-product>
             </div>
         </div>
     </div>
 
-    <app-pagination></app-pagination>
+    <div class="mt-2 flex-center">
+      <button [disabled]="finish" (click)="next()" mat-raised-button>Cargar mas...</button>
+    </div>
+    <!-- <app-pagination [pagination]="pagination" (clickBack)="back()" (clickNext)="next()"></app-pagination> -->
 
 </div>

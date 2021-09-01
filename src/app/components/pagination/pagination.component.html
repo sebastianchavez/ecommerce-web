@@ -1,11 +1,17 @@
 <div class="container-pagination">
-    <div class="selected">
+    <div class="pointer" (click)="back()">
+        <label class="back">Volver</label>
+    </div>
+    <div *ngFor="let item of pagination.pages" [ngClass]="{'selected': pagination.page == item}">
+        <label class="number">{{item}}</label>
+    </div>
+    <!-- <div class="selected">
         <label class="number">1</label>
     </div>
     <div>
         <label>2</label>
-    </div>
-    <div>
+    </div> -->
+    <div class="pointer" (click)="next()">
         <label class="next">Siguiente</label>    
     </div>
 </div>
