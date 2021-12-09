@@ -29,7 +29,7 @@ export class ProductService {
         const data = { ...product, id };
         const result = await this.productCollection.doc(id).set(data);
         resolve(result)
-      } catch (e) {
+      } catch (e: any) {
         reject(e.message)
       }
     })
@@ -90,7 +90,7 @@ export class ProductService {
         const result = await this.productCollection.doc(product.id).delete()
         await this.angularFireStorage.ref('pictures/products/' + product.nameImage ).delete()
         resolve(result)
-      } catch (e) {
+      } catch (e: any) {
         reject(e.message)
       }
     })
